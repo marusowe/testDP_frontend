@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/testDP_frontend/static/css/main.9d5b29c0.chunk.css",
+    "main.js": "/testDP_frontend/static/js/main.ac8c3063.chunk.js",
+    "main.js.map": "/testDP_frontend/static/js/main.ac8c3063.chunk.js.map",
+    "runtime-main.js": "/testDP_frontend/static/js/runtime-main.9c0a7633.js",
+    "runtime-main.js.map": "/testDP_frontend/static/js/runtime-main.9c0a7633.js.map",
+    "static/css/2.56001c6a.chunk.css": "/testDP_frontend/static/css/2.56001c6a.chunk.css",
+    "static/js/2.84619485.chunk.js": "/testDP_frontend/static/js/2.84619485.chunk.js",
+    "static/js/2.84619485.chunk.js.map": "/testDP_frontend/static/js/2.84619485.chunk.js.map",
+    "static/js/3.cce7fa81.chunk.js": "/testDP_frontend/static/js/3.cce7fa81.chunk.js",
+    "static/js/3.cce7fa81.chunk.js.map": "/testDP_frontend/static/js/3.cce7fa81.chunk.js.map",
+    "index.html": "/testDP_frontend/index.html",
+    "static/css/2.56001c6a.chunk.css.map": "/testDP_frontend/static/css/2.56001c6a.chunk.css.map",
+    "static/css/main.9d5b29c0.chunk.css.map": "/testDP_frontend/static/css/main.9d5b29c0.chunk.css.map",
+    "static/js/2.84619485.chunk.js.LICENSE.txt": "/testDP_frontend/static/js/2.84619485.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9c0a7633.js",
+    "static/css/2.56001c6a.chunk.css",
+    "static/js/2.84619485.chunk.js",
+    "static/css/main.9d5b29c0.chunk.css",
+    "static/js/main.ac8c3063.chunk.js"
+  ]
+}
