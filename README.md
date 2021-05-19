@@ -1,70 +1,29 @@
-# Getting Started with Create React App
+### Тестовое задание ###
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Требуется реализовать web-приложение - аналог bit.ly и подобных систем.
+То есть для длинных урлов создает их короткие аналоги.
 
-## Available Scripts
+Приложение содержит одну страницу на которой:
+Форма, в которой можно ввести URL, который должен быть сокращен
+Табличка со всеми сокращенными URL (с пагинацией) данного пользователя
 
-In the project directory, you can run:
+Обязательные требования:
+* Приложение НЕ содержит авторизации
+* Приложение отслеживает пользователей по сессии (использовать сессии Django), т.е. у каждого пользователя свой набор редиректов (правил)
+* Данные хранятся в MySQL
+* При заходе на сжатый URL приложение редиректит (серверный редирект) на соответствующий URL (который был сжат)
+* Пользователь по желанию может указать свой <subpart>. Если такой <subpart> уже используется, нужно сообщить об этом юзеру
+* Реализация на Django
+* Кэширование редиректов в редисе. Требуется сохранить в редис маппинг сокращенного урла с полным адресом, а не объект правила редиректа полностью. НЕ ИСПОЛЬЗОВАТЬ кэширование представлений, QuerySet’ов, и иные высокоуровневые способы, которые подразумевают лишь установку пары атрибутов в настройке приложения
+* Очистка старых правил по расписанию:
+удаление записей из MySQL; 
+ очистку редиректов из Redis можно реализовать либо вместе с очисткой MySQL, либо по TTL
+  
+### Развертывание ###
+Для простоты развертывания, все файлы с переменным виратульного окружения находятся в репозитории
 
-### `npm start`
+1. Установить зависимости  
+    `npm i`
+2. Заупустить  
+    `npm run`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
